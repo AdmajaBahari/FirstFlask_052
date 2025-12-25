@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="result-page">
+    <div class="profile-container">
+        <div class="profile-card">
+            <h1 class="profile-title">Profil Mahasiswa</h1>
+            
+            <div class="profile-layout">
+                <!-- Avatar Section -->
+                <div class="avatar-section">
+                    <div class="avatar-circle">
+                        <!-- Icon User SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="info-section">
+                    <div class="info-box">
+                        <p class="info-label">Nama Lengkap</p>
+                        <p class="info-value">{{ nama }}</p>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="info-label">NIM</p>
+                        <p class="info-value">{{ nim }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/" class="btn-back">Kembali ke Home</a>
+        </div>
+    </div>
+</body>
+</html>
